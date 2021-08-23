@@ -1,0 +1,32 @@
+#container {
+    display: grid;
+    color:skyblue;
+    grid-template-columns: 700px;
+    grid-template-rows: auto auto;
+    row-gap: 10px;
+    justify-content: center;
+    grid-template-areas:
+        "header"
+        "form";
+}
+
+
+header {
+    grid-area: header;
+    text-align: center;
+}
+header > h1 {
+    margin-bottom: 0;
+}
+header > p {
+    margin-top: 0;
+}
+ 
+#survey-form {
+    --dark-blue: rgba(27, 27, 50, 0.8);
+    grid-area: form;
+    padding: 30px;
+    background-color: var(--dark-blue);    
+    /* margin: 16px auto;
+    max-width: 800px; */
+}
