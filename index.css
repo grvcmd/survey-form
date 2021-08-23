@@ -1,13 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+:root {
+    --color-darkblue: #1b1b32;
+    --color-green: #37af65;
+    --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+}
+
+.boxsizingBorder {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    background: var(--color-darkblue);
+    background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url("https://wallpaperbat.com/img/323662-peaceful-anime-wallpaper-top-free-peaceful-anime-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: white;
+    margin: 0;
+}
+
 #container {
     display: grid;
-    color:skyblue;
-    grid-template-columns: 700px;
     grid-template-rows: auto auto;
     row-gap: 10px;
-    justify-content: center;
     grid-template-areas:
         "header"
         "form";
+}
+#description {
+    font-style: italic;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -23,10 +53,78 @@ header > p {
 }
  
 #survey-form {
-    --dark-blue: rgba(27, 27, 50, 0.8);
     grid-area: form;
-    padding: 30px;
-    background-color: var(--dark-blue);    
-    /* margin: 16px auto;
-    max-width: 800px; */
+    padding: 2.5rem;
+    background-color: var(--color-darkblue-alpha);    
+    justify-self: center;
+    border-radius: 20px;
+}
+#number-label {
+    margin-bottom: 1.75rem;
+}
+#submit {
+    width: 100%;
+    background: var(--color-green);
+    color: inherit;
+    border-radius: 2px;
+    cursor: pointer;
+    border: 0;
+    padding: 0.75rem;
+}
+
+/* Place labels above inputs */
+label {
+    display: block;
+}
+/* input[type=text], input[type=email], input[type=number] {
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.12rem;
+} */
+input {
+    margin: 10px 0;
+}
+
+p {
+    margin-bottom: 0.3rem;
+}
+textarea {
+    width: 100%;
+    max-width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    padding: 0.65rem;
+}
+input[type=radio], input[type=checkbox] {
+    margin-right: 0.625rem;
+    display: inline-block;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+}
+
+
+.form-group {
+    margin: 0 auto 1.75rem auto;
+    display: block;
+}
+.clue {
+    font-size: 0.8rem;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 2.375rem;
+    padding: 0.375rem 0.75rem;
+    color: #495057;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
 }
